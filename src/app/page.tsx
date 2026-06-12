@@ -90,7 +90,7 @@ function StatBar({ stats }: { stats: { positive: number; negative: number; neutr
 function CommentCard({ comment, showPostLink }: { comment: Comment & { postUrl?: string }; showPostLink?: boolean }) {
   const sentiment = comment.sentiment ?? 'neutral';
   return (
-    <div className={`border p-3 text-sm ${SENTIMENT_COLORS[sentiment]}`}>
+    <div className={`border p-4 text-base ${SENTIMENT_COLORS[sentiment]}`}>
       <div className="flex items-start justify-between gap-2">
         <div className="flex-1">
           <span className="font-semibold">@{comment.ownerUsername}</span>
@@ -281,15 +281,15 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 py-10">
         <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold text-black mb-2">Social Sentiment Analyzer</h1>
-          <p className="text-gray-500 text-sm">Analizuj komentarze z Instagram i TikToka — poznaj sentyment swojej społeczności</p>
+          <h1 className="text-5xl font-semibold text-black mb-3 tracking-tight">Social Sentiment Analyzer</h1>
+          <p className="text-gray-500 text-lg font-light">Analizuj komentarze z Instagram i TikToka — poznaj sentyment swojej społeczności</p>
         </div>
 
         <div className="bg-gray-50 border border-black p-6 mb-6 space-y-4">
           {/* Session ID */}
           <div>
             <div className="flex items-center justify-between mb-1">
-              <label className="text-sm font-medium text-black">Instagram Session ID</label>
+              <label className="text-base font-medium text-black">Instagram Session ID</label>
               <button
                 onClick={() => setShowSessionHelp(!showSessionHelp)}
                 className="text-xs text-blue-600 hover:underline cursor-pointer"
@@ -311,7 +311,7 @@ export default function Home() {
             )}
             <input
               type="password"
-              className="w-full border border-black bg-white p-3 text-sm text-black focus:outline-none focus:border-gray-500"
+              className="w-full border border-black bg-white p-3 text-base text-black focus:outline-none focus:border-gray-500"
               placeholder="np. 12345678%3AabcXYZ..."
               value={sessionId}
               onChange={(e) => setSessionId(e.target.value)}
@@ -321,9 +321,9 @@ export default function Home() {
 
           {/* URLs */}
           <div>
-            <label className="block text-sm font-medium text-black mb-1">Linki do postów (jeden na linię)</label>
+            <label className="block text-base font-medium text-black mb-1">Linki do postów (jeden na linię)</label>
             <textarea
-              className="w-full border border-black bg-white p-3 text-sm text-black focus:outline-none focus:border-gray-500 resize-none"
+              className="w-full border border-black bg-white p-3 text-base text-black focus:outline-none focus:border-gray-500 resize-none"
               rows={4}
               placeholder={"https://www.instagram.com/p/ABC123/\nhttps://www.tiktok.com/@user/video/123456789"}
               value={urls}
@@ -383,22 +383,22 @@ export default function Home() {
             )}
 
             <div className="bg-gray-50 border border-black p-6">
-              <h2 className="font-semibold text-black mb-4">Podsumowanie ogólne</h2>
+              <h2 className="text-xl font-semibold text-black mb-4 tracking-tight">Podsumowanie ogólne</h2>
               <div className="grid grid-cols-3 gap-4 mb-4">
                 <div className="text-center p-4 bg-green-50 border border-green-300">
-                  <div className="text-2xl font-bold text-green-700 font-mono">{report.overallStats.positive}</div>
-                  <div className="text-xs text-green-700 mt-1">Pozytywne</div>
-                  <div className="text-xs text-green-600 mt-1 font-mono">❤️ {report.overallStats.positiveLikes}</div>
+                  <div className="text-4xl font-semibold text-green-700 font-mono">{report.overallStats.positive}</div>
+                  <div className="text-sm text-green-700 mt-1">Pozytywne</div>
+                  <div className="text-sm text-green-600 mt-1 font-mono">❤️ {report.overallStats.positiveLikes}</div>
                 </div>
                 <div className="text-center p-4 bg-gray-100 border border-gray-300">
-                  <div className="text-2xl font-bold text-gray-600 font-mono">{report.overallStats.neutral}</div>
-                  <div className="text-xs text-gray-600 mt-1">Neutralne</div>
-                  <div className="text-xs text-gray-500 mt-1 font-mono">❤️ {report.overallStats.neutralLikes}</div>
+                  <div className="text-4xl font-semibold text-gray-600 font-mono">{report.overallStats.neutral}</div>
+                  <div className="text-sm text-gray-600 mt-1">Neutralne</div>
+                  <div className="text-sm text-gray-500 mt-1 font-mono">❤️ {report.overallStats.neutralLikes}</div>
                 </div>
                 <div className="text-center p-4 bg-red-50 border border-red-300">
-                  <div className="text-2xl font-bold text-red-700 font-mono">{report.overallStats.negative}</div>
-                  <div className="text-xs text-red-700 mt-1">Negatywne</div>
-                  <div className="text-xs text-red-600 mt-1 font-mono">❤️ {report.overallStats.negativeLikes}</div>
+                  <div className="text-4xl font-semibold text-red-700 font-mono">{report.overallStats.negative}</div>
+                  <div className="text-sm text-red-700 mt-1">Negatywne</div>
+                  <div className="text-sm text-red-600 mt-1 font-mono">❤️ {report.overallStats.negativeLikes}</div>
                 </div>
               </div>
               <StatBar stats={report.overallStats} />
