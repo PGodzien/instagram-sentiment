@@ -14,6 +14,54 @@ function extractShortcode(url: string): string | null {
   return url.match(/\/(?:p|reels?)\/([A-Za-z0-9_-]+)/)?.[1] ?? null;
 }
 
+function isTikTok(url: string): boolean {
+  return /tiktok\.com/i.test(url);
+}
+
+interface TikTokComment {
+  id?: string;
+  cid?: string;
+  text: string;
+  uniqueId?: string;
+  authorMeta?: { name?: string };
+  createTime?: number;
+  createTimeISO?: string;
+  diggCount?: number;
+  likeCount?: number;
+}
+
+async function fetchTikTokComments(
+  postUrl: string,
+  apifyToken: string
+): Promise<{ id: string; text: string; ownerUsername: string; timestamp: string; likesCount: number; postUrl: string }[]> {
+  const runRes = await fetch(
+    `https://api.apify.com/v2/acts/clockworks~tiktok-comments-scraper/run-sync-get-dataset-items?token=${apifyToken}&timeout=120`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ postURLs: [postUrl], maxComments: 500 }),
+    }
+  );
+
+  if (!runRes.ok) {
+    const body = await runRes.text();
+    throw new Error(`Apify error ${runRes.status}: ${body.slice(0, 300)}`);
+  }
+
+  const items: TikTokComment[] = await runRes.json();
+
+  return items
+    .filter((item) => item.text?.trim())
+    .map((item, i) => ({
+      id: item.id ?? item.cid ?? String(i),
+      text: item.text.trim(),
+      ownerUsername: item.uniqueId ?? item.authorMeta?.name ?? 'unknown',
+      timestamp: item.createTimeISO ?? (item.createTime ? new Date(item.createTime * 1000).toISOString() : new Date().toISOString()),
+      likesCount: item.diggCount ?? item.likeCount ?? 0,
+      postUrl,
+    }));
+}
+
 interface IGComment {
   pk: string;
   text: string;
@@ -89,21 +137,36 @@ async function fetchAllComments(
 
 export async function POST(req: NextRequest) {
   try {
-    const { urls, sessionId } = (await req.json()) as { urls: string[]; sessionId: string };
+    const { urls, sessionId, apifyToken } = (await req.json()) as {
+      urls: string[];
+      sessionId: string;
+      apifyToken: string;
+    };
 
     if (!Array.isArray(urls) || urls.length === 0) {
       return NextResponse.json({ error: 'Brak linków.' }, { status: 400 });
     }
-    if (!sessionId?.trim()) {
-      return NextResponse.json({ error: 'Brak Instagram session ID.' }, { status: 400 });
+
+    const hasInstagram = urls.some((u) => !isTikTok(u));
+    const hasTikTok = urls.some(isTikTok);
+
+    if (hasInstagram && !sessionId?.trim()) {
+      return NextResponse.json({ error: 'Brak Instagram Session ID.' }, { status: 400 });
+    }
+    if (hasTikTok && !apifyToken?.trim()) {
+      return NextResponse.json({ error: 'Brak Apify Token (wymagany dla TikToka).' }, { status: 400 });
     }
 
     const results = await Promise.all(
       urls.map(async (url) => {
-        const shortcode = extractShortcode(url);
-        if (!shortcode) return { url, comments: [], error: 'Nieprawidłowy URL' };
-        const mediaId = shortcodeToMediaId(shortcode);
         try {
+          if (isTikTok(url)) {
+            const comments = await fetchTikTokComments(url, apifyToken.trim());
+            return { url, comments, error: null };
+          }
+          const shortcode = extractShortcode(url);
+          if (!shortcode) return { url, comments: [], error: 'Nieprawidłowy URL Instagram' };
+          const mediaId = shortcodeToMediaId(shortcode);
           const comments = await fetchAllComments(mediaId, sessionId.trim(), url);
           return { url, comments, error: null };
         } catch (e) {

@@ -1,1 +1,47 @@
-{"data":"aW1wb3J0IExaU3RyaW5nIGZyb20gJ2x6LXN0cmluZyc7CgppbnRlcmZhY2UgQ29tbWVudCB7CiAgaWQ6IHN0cmluZzsKICB0ZXh0OiBzdHJpbmc7CiAgb3duZXJVc2VybmFtZTogc3RyaW5nOwogIHRpbWVzdGFtcDogc3RyaW5nOwogIGxpa2VzQ291bnQ6IG51bWJlcjsKICBwb3N0VXJsOiBzdHJpbmc7CiAgc2VudGltZW50PzogJ3Bvc2l0aXZlJyB8ICduZWdhdGl2ZScgfCAnbmV1dHJhbCc7Cn0KCmludGVyZmFjZSBQb3N0UmVzdWx0IHsKICBwb3N0VXJsOiBzdHJpbmc7CiAgcG9zdElkOiBzdHJpbmc7CiAgY29tbWVudHM6IENvbW1lbnRbXTsKICBzdGF0czogeyBwb3NpdGl2ZTogbnVtYmVyOyBuZWdhdGl2ZTogbnVtYmVyOyBuZXV0cmFsOiBudW1iZXI7IHRvdGFsOiBudW1iZXI7IHRvdGFsTGlrZXM/OiBudW1iZXI7IHBvc2l0aXZlTGlrZXM/OiBudW1iZXI7IG5lZ2F0aXZlTGlrZXM/OiBudW1iZXI7IG5ldXRyYWxMaWtlcz86IG51bWJlciB9OwogIGVycm9yPzogc3RyaW5nIHwgbnVsbDsKfQoKaW50ZXJmYWNlIFByb2ZpbGVTdW1tYXJ5IHsKICB1c2VybmFtZTogc3RyaW5nOwogIGNvbW1lbnRzOiAoQ29tbWVudCAmIHsgcG9zdFVybDogc3RyaW5nIH0pW107CiAgc3RhdHM6IHsgcG9zaXRpdmU6IG51bWJlcjsgbmVnYXRpdmU6IG51bWJlcjsgbmV1dHJhbDogbnVtYmVyOyB0b3RhbDogbnVtYmVyOyB0b3RhbExpa2VzPzogbnVtYmVyOyBwb3NpdGl2ZUxpa2VzPzogbnVtYmVyOyBuZWdhdGl2ZUxpa2VzPzogbnVtYmVyOyBuZXV0cmFsTGlrZXM/OiBudW1iZXIgfTsKfQoKZXhwb3J0IGludGVyZmFjZSBSZXBvcnREYXRhIHsKICBwb3N0czogUG9zdFJlc3VsdFtdOwogIHByb2ZpbGVzOiBQcm9maWxlU3VtbWFyeVtdOwogIG92ZXJhbGxTdGF0czogeyBwb3NpdGl2ZTogbnVtYmVyOyBuZWdhdGl2ZTogbnVtYmVyOyBuZXV0cmFsOiBudW1iZXI7IHRvdGFsOiBudW1iZXI7IHRvdGFsTGlrZXM/OiBudW1iZXI7IHBvc2l0aXZlTGlrZXM/OiBudW1iZXI7IG5lZ2F0aXZlTGlrZXM/OiBudW1iZXI7IG5ldXRyYWxMaWtlcz86IG51bWJlciB9OwogIHdhcm5pbmc/OiBzdHJpbmc7Cn0KCmV4cG9ydCBmdW5jdGlvbiBlbmNvZGVSZXBvcnQocmVwb3J0OiBSZXBvcnREYXRhKTogc3RyaW5nIHsKICAvLyBVc2UgTFotc3RyaW5nIGNvbXByZXNzaW9uIGZvciBVUkwtc2FmZSBlbmNvZGluZyAobXVjaCBzbWFsbGVyIHRoYW4gYmFzZTY0KQogIHJldHVybiBMWlN0cmluZy5jb21wcmVzc1RvRW5jb2RlZFVSSUNvbXBvbmVudChKU09OLnN0cmluZ2lmeShyZXBvcnQpKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGRlY29kZVJlcG9ydChlbmNvZGVkOiBzdHJpbmcpOiBSZXBvcnREYXRhIHsKICAvLyBUcnkgTFotc3RyaW5nIGRlY29tcHJlc3Npb24gZmlyc3QsIGZhbGwgYmFjayB0byBsZWdhY3kgYmFzZTY0IGZvciBvbGQgbGlua3MKICBjb25zdCBkZWNvbXByZXNzZWQgPSBMWlN0cmluZy5kZWNvbXByZXNzRnJvbUVuY29kZWRVUklDb21wb25lbnQoZW5jb2RlZCk7CiAgaWYgKGRlY29tcHJlc3NlZCkgewogICAgcmV0dXJuIEpTT04ucGFyc2UoZGVjb21wcmVzc2VkKTsKICB9CiAgLy8gRmFsbGJhY2sgZm9yIG9sZCBiYXNlNjQtZW5jb2RlZCBsaW5rcwogIHJldHVybiBKU09OLnBhcnNlKGRlY29kZVVSSUNvbXBvbmVudChhdG9iKGVuY29kZWQpKSk7Cn0K"}
+import LZString from 'lz-string';
+
+interface Comment {
+  id: string;
+  text: string;
+  ownerUsername: string;
+  timestamp: string;
+  likesCount: number;
+  postUrl: string;
+  sentiment?: 'positive' | 'negative' | 'neutral';
+}
+
+interface PostResult {
+  postUrl: string;
+  postId: string;
+  comments: Comment[];
+  stats: { positive: number; negative: number; neutral: number; total: number; totalLikes?: number; positiveLikes?: number; negativeLikes?: number; neutralLikes?: number };
+  error?: string | null;
+}
+
+interface ProfileSummary {
+  username: string;
+  comments: (Comment & { postUrl: string })[];
+  stats: { positive: number; negative: number; neutral: number; total: number; totalLikes?: number; positiveLikes?: number; negativeLikes?: number; neutralLikes?: number };
+}
+
+export interface ReportData {
+  posts: PostResult[];
+  profiles: ProfileSummary[];
+  overallStats: { positive: number; negative: number; neutral: number; total: number; totalLikes?: number; positiveLikes?: number; negativeLikes?: number; neutralLikes?: number };
+  warning?: string;
+}
+
+export function encodeReport(report: ReportData): string {
+  // Use LZ-string compression for URL-safe encoding (much smaller than base64)
+  return LZString.compressToEncodedURIComponent(JSON.stringify(report));
+}
+
+export function decodeReport(encoded: string): ReportData {
+  // Try LZ-string decompression first, fall back to legacy base64 for old links
+  const decompressed = LZString.decompressFromEncodedURIComponent(encoded);
+  if (decompressed) {
+    return JSON.parse(decompressed);
+  }
+  // Fallback for old base64-encoded links
+  return JSON.parse(decodeURIComponent(atob(encoded)));
+}

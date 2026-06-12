@@ -1,1 +1,30 @@
-{"data":"ewogICJuYW1lIjogImluc3RhZ3JhbS1zZW50aW1lbnQiLAogICJ2ZXJzaW9uIjogIjAuMS4wIiwKICAicHJpdmF0ZSI6IHRydWUsCiAgInNjcmlwdHMiOiB7CiAgICAiZGV2IjogIm5leHQgZGV2IiwKICAgICJidWlsZCI6ICJuZXh0IGJ1aWxkIiwKICAgICJzdGFydCI6ICJuZXh0IHN0YXJ0IiwKICAgICJsaW50IjogImVzbGludCIKICB9LAogICJkZXBlbmRlbmNpZXMiOiB7CiAgICAiQGFudGhyb3BpYy1haS9zZGsiOiAiXjAuOTAuMCIsCiAgICAiQHZlcmNlbC9ibG9iIjogIl4yLjMuMyIsCiAgICAibHotc3RyaW5nIjogIl4xLjUuMCIsCiAgICAibmV4dCI6ICIxNi4yLjQiLAogICAgInJlYWN0IjogIjE5LjIuNCIsCiAgICAicmVhY3QtZG9tIjogIjE5LjIuNCIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQHRhaWx3aW5kY3NzL3Bvc3Rjc3MiOiAiXjQiLAogICAgIkB0eXBlcy9sei1zdHJpbmciOiAiXjEuMy4zNCIsCiAgICAiQHR5cGVzL25vZGUiOiAiXjIwIiwKICAgICJAdHlwZXMvcmVhY3QiOiAiXjE5IiwKICAgICJAdHlwZXMvcmVhY3QtZG9tIjogIl4xOSIsCiAgICAiZXNsaW50IjogIl45IiwKICAgICJlc2xpbnQtY29uZmlnLW5leHQiOiAiMTYuMi40IiwKICAgICJ0YWlsd2luZGNzcyI6ICJeNCIsCiAgICAidHlwZXNjcmlwdCI6ICJeNSIKICB9Cn0K"}
+{
+  "name": "instagram-sentiment",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.90.0",
+    "@vercel/blob": "^2.3.3",
+    "lz-string": "^1.5.0",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/lz-string": "^1.3.34",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

@@ -1,1 +1,75 @@
-{"data":"aW1wb3J0IHsgcHV0LCBsaXN0IH0gZnJvbSAnQHZlcmNlbC9ibG9iJzsKaW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gJ25leHQvc2VydmVyJzsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBQT1NUKHJlcXVlc3Q6IE5leHRSZXF1ZXN0KSB7CiAgdHJ5IHsKICAgIGNvbnN0IHJlcG9ydCA9IGF3YWl0IHJlcXVlc3QuanNvbigpOwogICAgCiAgICAvLyBHZW5lcmF0ZSBhIHNob3J0IHVuaXF1ZSBJRAogICAgY29uc3QgaWQgPSBjcnlwdG8ucmFuZG9tVVVJRCgpLnNsaWNlKDAsIDgpOwogICAgY29uc3QgZmlsZW5hbWUgPSBgcmVwb3J0cy8ke2lkfS5qc29uYDsKICAgIAogICAgLy8gQ2hlY2sgaWYgQkxPQiB0b2tlbiBpcyBjb25maWd1cmVkCiAgICBpZiAoIXByb2Nlc3MuZW52LkJMT0JfUkVBRF9XUklURV9UT0tFTikgewogICAgICBjb25zb2xlLmVycm9yKCdCTE9CX1JFQURfV1JJVEVfVE9LRU4gaXMgbm90IGNvbmZpZ3VyZWQnKTsKICAgICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKAogICAgICAgIHsgZXJyb3I6ICdCcmFrIGtvbmZpZ3VyYWNqaSBzdG9yYWdlIChCTE9CX1JFQURfV1JJVEVfVE9LRU4pJyB9LAogICAgICAgIHsgc3RhdHVzOiA1MDAgfQogICAgICApOwogICAgfQogICAgCiAgICAvLyBTdG9yZSBpbiBWZXJjZWwgQmxvYiAobmVlZHMgcHVibGljIHN0b3JlKQogICAgY29uc3QgYmxvYiA9IGF3YWl0IHB1dChmaWxlbmFtZSwgSlNPTi5zdHJpbmdpZnkocmVwb3J0KSwgewogICAgICBhY2Nlc3M6ICdwdWJsaWMnLAogICAgICBjb250ZW50VHlwZTogJ2FwcGxpY2F0aW9uL2pzb24nLAogICAgICBhZGRSYW5kb21TdWZmaXg6IGZhbHNlLAogICAgfSk7CiAgICAKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGlkLCB1cmw6IGJsb2IudXJsIH0pOwogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICBjb25zb2xlLmVycm9yKCdFcnJvciBzYXZpbmcgcmVwb3J0OicsIGVycm9yKTsKICAgIGNvbnN0IG1lc3NhZ2UgPSBlcnJvciBpbnN0YW5jZW9mIEVycm9yID8gZXJyb3IubWVzc2FnZSA6ICdOaWV6bmFueSBixYLEhWQnOwogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKAogICAgICB7IGVycm9yOiBgTmllIHVkYcWCbyBzacSZIHphcGlzYcSHIHJhcG9ydHU6ICR7bWVzc2FnZX1gIH0sCiAgICAgIHsgc3RhdHVzOiA1MDAgfQogICAgKTsKICB9Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBHRVQocmVxdWVzdDogTmV4dFJlcXVlc3QpIHsKICB0cnkgewogICAgY29uc3QgeyBzZWFyY2hQYXJhbXMgfSA9IG5ldyBVUkwocmVxdWVzdC51cmwpOwogICAgY29uc3QgaWQgPSBzZWFyY2hQYXJhbXMuZ2V0KCdpZCcpOwogICAgCiAgICBpZiAoIWlkKSB7CiAgICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbigKICAgICAgICB7IGVycm9yOiAnQnJhayBJRCByYXBvcnR1JyB9LAogICAgICAgIHsgc3RhdHVzOiA0MDAgfQogICAgICApOwogICAgfQogICAgCiAgICBjb25zdCBwcmVmaXggPSBgcmVwb3J0cy8ke2lkfS5qc29uYDsKICAgIAogICAgLy8gTGlzdCBibG9icyB3aXRoIHRoaXMgcHJlZml4IHRvIGZpbmQgVVJMCiAgICBjb25zdCB7IGJsb2JzIH0gPSBhd2FpdCBsaXN0KHsgcHJlZml4IH0pOwogICAgCiAgICBpZiAoYmxvYnMubGVuZ3RoID09PSAwKSB7CiAgICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbigKICAgICAgICB7IGVycm9yOiAnUmFwb3J0IG5pZSB6bmFsZXppb255JyB9LAogICAgICAgIHsgc3RhdHVzOiA0MDQgfQogICAgICApOwogICAgfQogICAgCiAgICAvLyBGZXRjaCB0aGUgcmVwb3J0IGRhdGEKICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goYmxvYnNbMF0udXJsKTsKICAgIGNvbnN0IHJlcG9ydCA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKTsKICAgIAogICAgcmV0dXJuIE5leHRSZXNwb25zZS5qc29uKHJlcG9ydCk7CiAgfSBjYXRjaCAoZXJyb3IpIHsKICAgIGNvbnNvbGUuZXJyb3IoJ0Vycm9yIGZldGNoaW5nIHJlcG9ydDonLCBlcnJvcik7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oCiAgICAgIHsgZXJyb3I6ICdOaWUgdWRhxYJvIHNpxJkgcG9icmHEhyByYXBvcnR1JyB9LAogICAgICB7IHN0YXR1czogNDA0IH0KICAgICk7CiAgfQp9Cg=="}
+import { put, list } from '@vercel/blob';
+import { NextRequest, NextResponse } from 'next/server';
+
+export async function POST(request: NextRequest) {
+  try {
+    const report = await request.json();
+    
+    // Generate a short unique ID
+    const id = crypto.randomUUID().slice(0, 8);
+    const filename = `reports/${id}.json`;
+    
+    // Check if BLOB token is configured
+    if (!process.env.BLOB_READ_WRITE_TOKEN) {
+      console.error('BLOB_READ_WRITE_TOKEN is not configured');
+      return NextResponse.json(
+        { error: 'Brak konfiguracji storage (BLOB_READ_WRITE_TOKEN)' },
+        { status: 500 }
+      );
+    }
+    
+    // Store in Vercel Blob (needs public store)
+    const blob = await put(filename, JSON.stringify(report), {
+      access: 'public',
+      contentType: 'application/json',
+      addRandomSuffix: false,
+    });
+    
+    return NextResponse.json({ id, url: blob.url });
+  } catch (error) {
+    console.error('Error saving report:', error);
+    const message = error instanceof Error ? error.message : 'Nieznany błąd';
+    return NextResponse.json(
+      { error: `Nie udało się zapisać raportu: ${message}` },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const id = searchParams.get('id');
+    
+    if (!id) {
+      return NextResponse.json(
+        { error: 'Brak ID raportu' },
+        { status: 400 }
+      );
+    }
+    
+    const prefix = `reports/${id}.json`;
+    
+    // List blobs with this prefix to find URL
+    const { blobs } = await list({ prefix });
+    
+    if (blobs.length === 0) {
+      return NextResponse.json(
+        { error: 'Raport nie znaleziony' },
+        { status: 404 }
+      );
+    }
+    
+    // Fetch the report data
+    const response = await fetch(blobs[0].url);
+    const report = await response.json();
+    
+    return NextResponse.json(report);
+  } catch (error) {
+    console.error('Error fetching report:', error);
+    return NextResponse.json(
+      { error: 'Nie udało się pobrać raportu' },
+      { status: 404 }
+    );
+  }
+}

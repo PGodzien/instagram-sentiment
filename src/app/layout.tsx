@@ -1,1 +1,37 @@
-{"data":"aW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gIm5leHQiOwppbXBvcnQgeyBTcGFjZV9Hcm90ZXNrLCBKZXRCcmFpbnNfTW9ubyB9IGZyb20gIm5leHQvZm9udC9nb29nbGUiOwppbXBvcnQgIi4vZ2xvYmFscy5jc3MiOwoKY29uc3Qgc3BhY2VHcm90ZXNrID0gU3BhY2VfR3JvdGVzayh7CiAgc3Vic2V0czogWyJsYXRpbiJdLAogIHZhcmlhYmxlOiAiLS1mb250LWhlYWRpbmciLAogIHdlaWdodDogWyI0MDAiLCAiNTAwIiwgIjYwMCIsICI3MDAiXSwKfSk7Cgpjb25zdCBqZXRicmFpbnNNb25vID0gSmV0QnJhaW5zX01vbm8oewogIHN1YnNldHM6IFsibGF0aW4iXSwKICB2YXJpYWJsZTogIi0tZm9udC1ib2R5IiwKICB3ZWlnaHQ6IFsiNDAwIiwgIjUwMCJdLAp9KTsKCmV4cG9ydCBjb25zdCBtZXRhZGF0YTogTWV0YWRhdGEgPSB7CiAgdGl0bGU6ICJJbnN0YWdyYW0gU2VudGltZW50IEFuYWx5emVyIiwKICBkZXNjcmlwdGlvbjogIkFuYWx5emUgc2VudGltZW50IG9mIEluc3RhZ3JhbSBjb21tZW50cyB1c2luZyBDbGF1ZGUgQUkiLAp9OwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUm9vdExheW91dCh7CiAgY2hpbGRyZW4sCn06IFJlYWRvbmx5PHsKICBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlOwp9PikgewogIHJldHVybiAoCiAgICA8aHRtbAogICAgICBsYW5nPSJwbCIKICAgICAgY2xhc3NOYW1lPXtgJHtzcGFjZUdyb3Rlc2sudmFyaWFibGV9ICR7amV0YnJhaW5zTW9uby52YXJpYWJsZX0gaC1mdWxsIGFudGlhbGlhc2VkYH0KICAgID4KICAgICAgPGJvZHkgY2xhc3NOYW1lPSJtaW4taC1mdWxsIGZsZXggZmxleC1jb2wgYmctd2hpdGUgdGV4dC1ibGFjayI+CiAgICAgICAge2NoaWxkcmVufQogICAgICA8L2JvZHk+CiAgICA8L2h0bWw+CiAgKTsKfQo="}
+import type { Metadata } from "next";
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["400", "500"],
+});
+
+export const metadata: Metadata = {
+  title: "Instagram Sentiment Analyzer",
+  description: "Analyze sentiment of Instagram comments using Claude AI",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="pl"
+      className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-white text-black">
+        {children}
+      </body>
+    </html>
+  );
+}
