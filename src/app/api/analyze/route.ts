@@ -1,1 +1,120 @@
-{"data":"aW1wb3J0IHsgTmV4dFJlcXVlc3QsIE5leHRSZXNwb25zZSB9IGZyb20gJ25leHQvc2VydmVyJzsKCmNvbnN0IEFMUEhBQkVUID0gJ0FCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXowMTIzNDU2Nzg5LV8nOwoKZnVuY3Rpb24gc2hvcnRjb2RlVG9NZWRpYUlkKHNob3J0Y29kZTogc3RyaW5nKTogc3RyaW5nIHsKICBsZXQgbWVkaWFJZCA9IEJpZ0ludCgwKTsKICBmb3IgKGNvbnN0IGMgb2Ygc2hvcnRjb2RlKSB7CiAgICBtZWRpYUlkID0gbWVkaWFJZCAqIEJpZ0ludCg2NCkgKyBCaWdJbnQoQUxQSEFCRVQuaW5kZXhPZihjKSk7CiAgfQogIHJldHVybiBtZWRpYUlkLnRvU3RyaW5nKCk7Cn0KCmZ1bmN0aW9uIGV4dHJhY3RTaG9ydGNvZGUodXJsOiBzdHJpbmcpOiBzdHJpbmcgfCBudWxsIHsKICByZXR1cm4gdXJsLm1hdGNoKC9cLyg/OnB8cmVlbClcLyhbQS1aYS16MC05Xy1dKykvKT8uWzFdID8/IG51bGw7Cn0KCmludGVyZmFjZSBJR0NvbW1lbnQgewogIHBrOiBzdHJpbmc7CiAgdGV4dDogc3RyaW5nOwogIHVzZXI6IHsgdXNlcm5hbWU6IHN0cmluZzsgZnVsbF9uYW1lPzogc3RyaW5nIH07CiAgY3JlYXRlZF9hdDogbnVtYmVyOwogIGNvbW1lbnRfbGlrZV9jb3VudDogbnVtYmVyOwogIGNoaWxkX2NvbW1lbnRfY291bnQ/OiBudW1iZXI7Cn0KCmFzeW5jIGZ1bmN0aW9uIGZldGNoQWxsQ29tbWVudHMoCiAgbWVkaWFJZDogc3RyaW5nLAogIHNlc3Npb25JZDogc3RyaW5nLAogIHBvc3RVcmw6IHN0cmluZwopOiBQcm9taXNlPHsgaWQ6IHN0cmluZzsgdGV4dDogc3RyaW5nOyBvd25lclVzZXJuYW1lOiBzdHJpbmc7IHRpbWVzdGFtcDogc3RyaW5nOyBsaWtlc0NvdW50OiBudW1iZXI7IHBvc3RVcmw6IHN0cmluZyB9W10+IHsKICBjb25zdCBoZWFkZXJzID0gewogICAgJ1VzZXItQWdlbnQnOiAnTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEyNC4wLjAuMCBTYWZhcmkvNTM3LjM2JywKICAgICdDb29raWUnOiBgc2Vzc2lvbmlkPSR7c2Vzc2lvbklkfWAsCiAgICAnWC1JRy1BcHAtSUQnOiAnOTM2NjE5NzQzMzkyNDU5JywKICAgICdYLVJlcXVlc3RlZC1XaXRoJzogJ1hNTEh0dHBSZXF1ZXN0JywKICAgICdBY2NlcHQnOiAnKi8qJywKICAgICdBY2NlcHQtTGFuZ3VhZ2UnOiAncGwtUEwscGw7cT0wLjksZW4tVVM7cT0wLjgsZW47cT0wLjcnLAogICAgJ1JlZmVyZXInOiAnaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8nLAogICAgJ09yaWdpbic6ICdodHRwczovL3d3dy5pbnN0YWdyYW0uY29tJywKICAgICdTZWMtRmV0Y2gtU2l0ZSc6ICdzYW1lLW9yaWdpbicsCiAgICAnU2VjLUZldGNoLU1vZGUnOiAnY29ycycsCiAgICAnU2VjLUZldGNoLURlc3QnOiAnZW1wdHknLAogIH07CgogIGNvbnN0IGFsbENvbW1lbnRzOiBSZXR1cm5UeXBlPHR5cGVvZiBmZXRjaEFsbENvbW1lbnRzPiBleHRlbmRzIFByb21pc2U8aW5mZXIgVD4gPyBUIDogbmV2ZXIgPSBbXTsKICBsZXQgbmV4dE1pbklkOiBzdHJpbmcgfCBudWxsID0gbnVsbDsKICBsZXQgcGFnZSA9IDA7CgogIGRvIHsKICAgIGNvbnN0IHVybCA9IG5ldyBVUkwoYGh0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vYXBpL3YxL21lZGlhLyR7bWVkaWFJZH0vY29tbWVudHMvYCk7CiAgICB1cmwuc2VhcmNoUGFyYW1zLnNldCgnY2FuX3N1cHBvcnRfdGhyZWFkaW5nJywgJ3RydWUnKTsKICAgIHVybC5zZWFyY2hQYXJhbXMuc2V0KCdwZXJtYWxpbmtfZW5hYmxlZCcsICdmYWxzZScpOwogICAgaWYgKG5leHRNaW5JZCkgdXJsLnNlYXJjaFBhcmFtcy5zZXQoJ21pbl9pZCcsIG5leHRNaW5JZCk7CgogICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2godXJsLnRvU3RyaW5nKCksIHsgaGVhZGVycyB9KTsKICAgIGlmICghcmVzLm9rKSB0aHJvdyBuZXcgRXJyb3IoYEluc3RhZ3JhbSBBUEkgJHtyZXMuc3RhdHVzfTogJHthd2FpdCByZXMudGV4dCgpLnRoZW4odCA9PiB0LnNsaWNlKDAsIDIwMCkpfWApOwoKICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXMuanNvbigpIGFzIHsKICAgICAgc3RhdHVzOiBzdHJpbmc7CiAgICAgIG1lc3NhZ2U/OiBzdHJpbmc7CiAgICAgIGNvbW1lbnRzPzogSUdDb21tZW50W107CiAgICAgIG5leHRfbWluX2lkPzogc3RyaW5nOwogICAgfTsKCiAgICBpZiAoZGF0YS5zdGF0dXMgPT09ICdmYWlsJykgewogICAgICB0aHJvdyBuZXcgRXJyb3IoYEluc3RhZ3JhbSBvZHJ6dWNpxYIgxbzEhWRhbmllOiAke2RhdGEubWVzc2FnZSA/PyAnbmllcHJhd2lkxYJvd3kgU2Vzc2lvbiBJRCBsdWIgcG9zdCBqZXN0IHByeXdhdG55J31gKTsKICAgIH0KCiAgICBjb25zdCBjb21tZW50cyA9IGRhdGEuY29tbWVudHMgPz8gW107CiAgICBmb3IgKGNvbnN0IGMgb2YgY29tbWVudHMpIHsKICAgICAgaWYgKCFjLnRleHQ/LnRyaW0oKSkgY29udGludWU7CiAgICAgIGFsbENvbW1lbnRzLnB1c2goewogICAgICAgIGlkOiBjLnBrLAogICAgICAgIHRleHQ6IGMudGV4dC50cmltKCksCiAgICAgICAgb3duZXJVc2VybmFtZTogYy51c2VyPy51c2VybmFtZSA/PyAndW5rbm93bicsCiAgICAgICAgdGltZXN0YW1wOiBuZXcgRGF0ZShjLmNyZWF0ZWRfYXQgKiAxMDAwKS50b0lTT1N0cmluZygpLAogICAgICAgIGxpa2VzQ291bnQ6IGMuY29tbWVudF9saWtlX2NvdW50ID8/IDAsCiAgICAgICAgcG9zdFVybCwKICAgICAgfSk7CiAgICB9CgogICAgbmV4dE1pbklkID0gZGF0YS5uZXh0X21pbl9pZCA/PyBudWxsOwogICAgcGFnZSsrOwogICAgLy8gU2FmZXR5OiBtYXggMjAgcGFnZXMgKDIwICogfjIwIGNvbW1lbnRzID0gNDAwKQogIH0gd2hpbGUgKG5leHRNaW5JZCAmJiBwYWdlIDwgMjApOwoKICByZXR1cm4gYWxsQ29tbWVudHM7Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBQT1NUKHJlcTogTmV4dFJlcXVlc3QpIHsKICB0cnkgewogICAgY29uc3QgeyB1cmxzLCBzZXNzaW9uSWQgfSA9IChhd2FpdCByZXEuanNvbigpKSBhcyB7IHVybHM6IHN0cmluZ1tdOyBzZXNzaW9uSWQ6IHN0cmluZyB9OwoKICAgIGlmICghQXJyYXkuaXNBcnJheSh1cmxzKSB8fCB1cmxzLmxlbmd0aCA9PT0gMCkgewogICAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogJ0JyYWsgbGlua8Ozdy4nIH0sIHsgc3RhdHVzOiA0MDAgfSk7CiAgICB9CiAgICBpZiAoIXNlc3Npb25JZD8udHJpbSgpKSB7CiAgICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IGVycm9yOiAnQnJhayBJbnN0YWdyYW0gc2Vzc2lvbiBJRC4nIH0sIHsgc3RhdHVzOiA0MDAgfSk7CiAgICB9CgogICAgY29uc3QgcmVzdWx0cyA9IGF3YWl0IFByb21pc2UuYWxsKAogICAgICB1cmxzLm1hcChhc3luYyAodXJsKSA9PiB7CiAgICAgICAgY29uc3Qgc2hvcnRjb2RlID0gZXh0cmFjdFNob3J0Y29kZSh1cmwpOwogICAgICAgIGlmICghc2hvcnRjb2RlKSByZXR1cm4geyB1cmwsIGNvbW1lbnRzOiBbXSwgZXJyb3I6ICdOaWVwcmF3aWTFgm93eSBVUkwnIH07CiAgICAgICAgY29uc3QgbWVkaWFJZCA9IHNob3J0Y29kZVRvTWVkaWFJZChzaG9ydGNvZGUpOwogICAgICAgIHRyeSB7CiAgICAgICAgICBjb25zdCBjb21tZW50cyA9IGF3YWl0IGZldGNoQWxsQ29tbWVudHMobWVkaWFJZCwgc2Vzc2lvbklkLnRyaW0oKSwgdXJsKTsKICAgICAgICAgIHJldHVybiB7IHVybCwgY29tbWVudHMsIGVycm9yOiBudWxsIH07CiAgICAgICAgfSBjYXRjaCAoZSkgewogICAgICAgICAgcmV0dXJuIHsgdXJsLCBjb21tZW50czogW10sIGVycm9yOiBTdHJpbmcoZSkgfTsKICAgICAgICB9CiAgICAgIH0pCiAgICApOwoKICAgIHJldHVybiBOZXh0UmVzcG9uc2UuanNvbih7IHJlc3VsdHMgfSk7CiAgfSBjYXRjaCAoZXJyKSB7CiAgICBjb25zb2xlLmVycm9yKCdBbmFseXplIGVycm9yOicsIGVycik7CiAgICByZXR1cm4gTmV4dFJlc3BvbnNlLmpzb24oeyBlcnJvcjogU3RyaW5nKGVycikgfSwgeyBzdGF0dXM6IDUwMCB9KTsKICB9Cn0K"}
+import { NextRequest, NextResponse } from 'next/server';
+
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+
+function shortcodeToMediaId(shortcode: string): string {
+  let mediaId = BigInt(0);
+  for (const c of shortcode) {
+    mediaId = mediaId * BigInt(64) + BigInt(ALPHABET.indexOf(c));
+  }
+  return mediaId.toString();
+}
+
+function extractShortcode(url: string): string | null {
+  return url.match(/\/(?:p|reels?)\/([A-Za-z0-9_-]+)/)?.[1] ?? null;
+}
+
+interface IGComment {
+  pk: string;
+  text: string;
+  user: { username: string; full_name?: string };
+  created_at: number;
+  comment_like_count: number;
+  child_comment_count?: number;
+}
+
+async function fetchAllComments(
+  mediaId: string,
+  sessionId: string,
+  postUrl: string
+): Promise<{ id: string; text: string; ownerUsername: string; timestamp: string; likesCount: number; postUrl: string }[]> {
+  const headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'Cookie': `sessionid=${sessionId}`,
+    'X-IG-App-ID': '936619743392459',
+    'X-Requested-With': 'XMLHttpRequest',
+    'Accept': '*/*',
+    'Accept-Language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Referer': 'https://www.instagram.com/',
+    'Origin': 'https://www.instagram.com',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-Mode': 'cors',
+    'Sec-Fetch-Dest': 'empty',
+  };
+
+  const allComments: ReturnType<typeof fetchAllComments> extends Promise<infer T> ? T : never = [];
+  let nextMinId: string | null = null;
+  let page = 0;
+
+  do {
+    const url = new URL(`https://www.instagram.com/api/v1/media/${mediaId}/comments/`);
+    url.searchParams.set('can_support_threading', 'true');
+    url.searchParams.set('permalink_enabled', 'false');
+    if (nextMinId) url.searchParams.set('min_id', nextMinId);
+
+    const res = await fetch(url.toString(), { headers });
+    if (!res.ok) throw new Error(`Instagram API ${res.status}: ${await res.text().then(t => t.slice(0, 200))}`);
+
+    const data = await res.json() as {
+      status: string;
+      message?: string;
+      comments?: IGComment[];
+      next_min_id?: string;
+    };
+
+    if (data.status === 'fail') {
+      throw new Error(`Instagram odrzucił żądanie: ${data.message ?? 'nieprawidłowy Session ID lub post jest prywatny'}`);
+    }
+
+    const comments = data.comments ?? [];
+    for (const c of comments) {
+      if (!c.text?.trim()) continue;
+      allComments.push({
+        id: c.pk,
+        text: c.text.trim(),
+        ownerUsername: c.user?.username ?? 'unknown',
+        timestamp: new Date(c.created_at * 1000).toISOString(),
+        likesCount: c.comment_like_count ?? 0,
+        postUrl,
+      });
+    }
+
+    nextMinId = data.next_min_id ?? null;
+    page++;
+    // Safety: max 20 pages (20 * ~20 comments = 400)
+  } while (nextMinId && page < 20);
+
+  return allComments;
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const { urls, sessionId } = (await req.json()) as { urls: string[]; sessionId: string };
+
+    if (!Array.isArray(urls) || urls.length === 0) {
+      return NextResponse.json({ error: 'Brak linków.' }, { status: 400 });
+    }
+    if (!sessionId?.trim()) {
+      return NextResponse.json({ error: 'Brak Instagram session ID.' }, { status: 400 });
+    }
+
+    const results = await Promise.all(
+      urls.map(async (url) => {
+        const shortcode = extractShortcode(url);
+        if (!shortcode) return { url, comments: [], error: 'Nieprawidłowy URL' };
+        const mediaId = shortcodeToMediaId(shortcode);
+        try {
+          const comments = await fetchAllComments(mediaId, sessionId.trim(), url);
+          return { url, comments, error: null };
+        } catch (e) {
+          return { url, comments: [], error: String(e) };
+        }
+      })
+    );
+
+    return NextResponse.json({ results });
+  } catch (err) {
+    console.error('Analyze error:', err);
+    return NextResponse.json({ error: String(err) }, { status: 500 });
+  }
+}
