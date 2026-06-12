@@ -63,23 +63,23 @@ function StatBar({ stats }: { stats: { positive: number; negative: number; neutr
           <div className="bg-red-500" style={{ width: `${negW}%` }} />
         </div>
         <div className="flex gap-4 text-xs text-gray-600">
-          <span className="flex items-center gap-1"><span className="w-2 h-2 bg-green-500 inline-block" />{stats.positive} ({posW.toFixed(0)}%)</span>
-          <span className="flex items-center gap-1"><span className="w-2 h-2 bg-gray-400 inline-block" />{stats.neutral} ({neuW.toFixed(0)}%)</span>
-          <span className="flex items-center gap-1"><span className="w-2 h-2 bg-red-500 inline-block" />{stats.negative} ({negW.toFixed(0)}%)</span>
+          <span className="flex items-center gap-1"><span className="w-2 h-2 bg-green-500 inline-block" /><span className="font-mono">{stats.positive} ({posW.toFixed(0)}%)</span></span>
+          <span className="flex items-center gap-1"><span className="w-2 h-2 bg-gray-400 inline-block" /><span className="font-mono">{stats.neutral} ({neuW.toFixed(0)}%)</span></span>
+          <span className="flex items-center gap-1"><span className="w-2 h-2 bg-red-500 inline-block" /><span className="font-mono">{stats.negative} ({negW.toFixed(0)}%)</span></span>
         </div>
       </div>
       {hasLikes && (
         <div className="space-y-1">
-          <div className="text-xs text-gray-500 font-medium">Polubienia ({stats.totalLikes})</div>
+          <div className="text-xs text-gray-500 font-medium">Polubienia (<span className="font-mono">{stats.totalLikes}</span>)</div>
           <div className="flex overflow-hidden h-2 bg-gray-200">
             <div className="bg-green-500" style={{ width: `${posLikesW}%` }} />
             <div className="bg-gray-400" style={{ width: `${neuLikesW}%` }} />
             <div className="bg-red-500" style={{ width: `${negLikesW}%` }} />
           </div>
           <div className="flex gap-4 text-xs text-gray-600">
-            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-green-500 inline-block" />{stats.positiveLikes} ({posLikesW.toFixed(0)}%)</span>
-            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-gray-400 inline-block" />{stats.neutralLikes} ({neuLikesW.toFixed(0)}%)</span>
-            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-red-500 inline-block" />{stats.negativeLikes} ({negLikesW.toFixed(0)}%)</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-green-500 inline-block" /><span className="font-mono">{stats.positiveLikes} ({posLikesW.toFixed(0)}%)</span></span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-gray-400 inline-block" /><span className="font-mono">{stats.neutralLikes} ({neuLikesW.toFixed(0)}%)</span></span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-red-500 inline-block" /><span className="font-mono">{stats.negativeLikes} ({negLikesW.toFixed(0)}%)</span></span>
           </div>
         </div>
       )}
@@ -103,7 +103,7 @@ function CommentCard({ comment, showPostLink }: { comment: Comment & { postUrl?:
           {SENTIMENT_LABELS[sentiment]}
         </span>
       </div>
-      <div className="mt-1 text-xs opacity-50">
+      <div className="mt-1 text-xs opacity-50 font-mono">
         {new Date(comment.timestamp).toLocaleDateString('pl-PL')} · {comment.likesCount} lajków
       </div>
     </div>
@@ -142,7 +142,7 @@ export default function Home() {
 
     try {
       // Step 1: fetch comments from Instagram
-      setLoadingMsg('Pobieranie komentarzy z Instagram...');
+      setLoadingMsg('Pobieranie komentarzy...');
       const analyzeRes = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -349,7 +349,7 @@ export default function Home() {
           <div className="bg-gray-50 border border-black p-8 text-center">
             <div className="animate-spin w-8 h-8 border-4 border-black border-t-transparent rounded-full mx-auto mb-3" />
             <p className="text-black font-medium">{loadingMsg}</p>
-            <p className="text-gray-500 text-xs mt-1">{elapsed}s</p>
+            <p className="text-gray-500 text-xs mt-1 font-mono">{elapsed}s</p>
           </div>
         )}
 
@@ -386,23 +386,23 @@ export default function Home() {
               <h2 className="font-semibold text-black mb-4">Podsumowanie ogólne</h2>
               <div className="grid grid-cols-3 gap-4 mb-4">
                 <div className="text-center p-4 bg-green-50 border border-green-300">
-                  <div className="text-2xl font-bold text-green-700">{report.overallStats.positive}</div>
+                  <div className="text-2xl font-bold text-green-700 font-mono">{report.overallStats.positive}</div>
                   <div className="text-xs text-green-700 mt-1">Pozytywne</div>
-                  <div className="text-xs text-green-600 mt-1">❤️ {report.overallStats.positiveLikes}</div>
+                  <div className="text-xs text-green-600 mt-1 font-mono">❤️ {report.overallStats.positiveLikes}</div>
                 </div>
                 <div className="text-center p-4 bg-gray-100 border border-gray-300">
-                  <div className="text-2xl font-bold text-gray-600">{report.overallStats.neutral}</div>
+                  <div className="text-2xl font-bold text-gray-600 font-mono">{report.overallStats.neutral}</div>
                   <div className="text-xs text-gray-600 mt-1">Neutralne</div>
-                  <div className="text-xs text-gray-500 mt-1">❤️ {report.overallStats.neutralLikes}</div>
+                  <div className="text-xs text-gray-500 mt-1 font-mono">❤️ {report.overallStats.neutralLikes}</div>
                 </div>
                 <div className="text-center p-4 bg-red-50 border border-red-300">
-                  <div className="text-2xl font-bold text-red-700">{report.overallStats.negative}</div>
+                  <div className="text-2xl font-bold text-red-700 font-mono">{report.overallStats.negative}</div>
                   <div className="text-xs text-red-700 mt-1">Negatywne</div>
-                  <div className="text-xs text-red-600 mt-1">❤️ {report.overallStats.negativeLikes}</div>
+                  <div className="text-xs text-red-600 mt-1 font-mono">❤️ {report.overallStats.negativeLikes}</div>
                 </div>
               </div>
               <StatBar stats={report.overallStats} />
-              <p className="text-xs text-gray-500 mt-2 text-center">{report.overallStats.total} komentarzy · {report.overallStats.totalLikes} polubień łącznie</p>
+              <p className="text-xs text-gray-500 mt-2 text-center font-mono">{report.overallStats.total} komentarzy · {report.overallStats.totalLikes} polubień łącznie</p>
             </div>
 
             <div className="flex gap-0 bg-gray-50 border border-black p-0">
