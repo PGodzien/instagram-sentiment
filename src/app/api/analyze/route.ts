@@ -153,7 +153,9 @@ export async function POST(req: NextRequest) {
     if (hasInstagram && !sessionId?.trim()) {
       return NextResponse.json({ error: 'Brak Instagram Session ID.' }, { status: 400 });
     }
-    if (hasTikTok && !apifyToken?.trim()) {
+
+    const resolvedApifyToken = apifyToken?.trim() || process.env.APIFY_TOKEN || '';
+    if (hasTikTok && !resolvedApifyToken) {
       return NextResponse.json({ error: 'Brak Apify Token (wymagany dla TikToka).' }, { status: 400 });
     }
 
@@ -161,7 +163,7 @@ export async function POST(req: NextRequest) {
       urls.map(async (url) => {
         try {
           if (isTikTok(url)) {
-            const comments = await fetchTikTokComments(url, apifyToken.trim());
+            const comments = await fetchTikTokComments(url, resolvedApifyToken);
             return { url, comments, error: null };
           }
           const shortcode = extractShortcode(url);

@@ -113,9 +113,7 @@ function CommentCard({ comment, showPostLink }: { comment: Comment & { postUrl?:
 export default function Home() {
   const [urls, setUrls] = useState('');
   const [sessionId, setSessionId] = useState('');
-  const [apifyToken, setApifyToken] = useState('');
   const [showSessionHelp, setShowSessionHelp] = useState(false);
-  const [showApifyHelp, setShowApifyHelp] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loadingMsg, setLoadingMsg] = useState('');
   const [report, setReport] = useState<ReportData | null>(null);
@@ -137,7 +135,6 @@ export default function Home() {
     const hasInstagram = urlList.some((u) => !/tiktok\.com/i.test(u));
     const hasTikTok = urlList.some((u) => /tiktok\.com/i.test(u));
     if (hasInstagram && !sessionId.trim()) { setError('Wklej Instagram Session ID (wymagany dla postów Instagram).'); return; }
-    if (hasTikTok && !apifyToken.trim()) { setError('Wklej Apify Token (wymagany dla TikToka).'); return; }
 
     setError(''); setReport(null); setReportId(null); setLoading(true); setElapsed(0);
     if (timerRef.current) clearInterval(timerRef.current);
@@ -149,7 +146,7 @@ export default function Home() {
       const analyzeRes = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ urls: urlList, sessionId: sessionId.trim(), apifyToken: apifyToken.trim() }),
+        body: JSON.stringify({ urls: urlList, sessionId: sessionId.trim() }),
       });
       const analyzeData = await analyzeRes.json();
       if (!analyzeRes.ok) { setError(analyzeData.error ?? 'Błąd pobierania.'); return; }
@@ -318,38 +315,6 @@ export default function Home() {
               placeholder="np. 12345678%3AabcXYZ..."
               value={sessionId}
               onChange={(e) => setSessionId(e.target.value)}
-              disabled={loading}
-            />
-          </div>
-
-          {/* Apify Token */}
-          <div>
-            <div className="flex items-center justify-between mb-1">
-              <label className="text-sm font-medium text-black">Apify Token <span className="text-gray-400 font-normal">(wymagany dla TikToka)</span></label>
-              <button
-                onClick={() => setShowApifyHelp(!showApifyHelp)}
-                className="text-xs text-blue-600 hover:underline cursor-pointer"
-              >
-                Jak to znaleźć?
-              </button>
-            </div>
-            {showApifyHelp && (
-              <div className="mb-2 p-3 bg-blue-50 border border-blue-200 text-xs text-gray-700 space-y-1">
-                <p className="font-medium text-black">Jak zdobyć Apify Token:</p>
-                <ol className="list-decimal list-inside space-y-1">
-                  <li>Wejdź na <strong>apify.com</strong> i utwórz konto (bezpłatny plan wystarczy)</li>
-                  <li>Przejdź do <strong>Settings → Integrations</strong></li>
-                  <li>Skopiuj <strong>Personal API token</strong></li>
-                </ol>
-                <p className="text-orange-600 font-medium mt-1">Token jest poufny — nie udostępniaj go nikomu.</p>
-              </div>
-            )}
-            <input
-              type="password"
-              className="w-full border border-black bg-white p-3 text-sm text-black focus:outline-none focus:border-gray-500"
-              placeholder="apify_api_xxxxxxxxxxxxxxxxxxxx"
-              value={apifyToken}
-              onChange={(e) => setApifyToken(e.target.value)}
               disabled={loading}
             />
           </div>
