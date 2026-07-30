@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+const TIKTOK_COMMENTS_PER_POST = 10_000;
 
 function shortcodeToMediaId(shortcode: string): string {
   let mediaId = BigInt(0);
@@ -35,11 +36,15 @@ async function fetchTikTokComments(
   apifyToken: string
 ): Promise<{ id: string; text: string; ownerUsername: string; timestamp: string; likesCount: number; postUrl: string }[]> {
   const runRes = await fetch(
-    `https://api.apify.com/v2/acts/clockworks~tiktok-comments-scraper/run-sync-get-dataset-items?token=${apifyToken}&timeout=120`,
+    `https://api.apify.com/v2/acts/clockworks~tiktok-comments-scraper/run-sync-get-dataset-items?token=${apifyToken}&timeout=300`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ postURLs: [postUrl], maxComments: 500 }),
+      body: JSON.stringify({
+        postURLs: [postUrl],
+        commentsPerPost: TIKTOK_COMMENTS_PER_POST,
+        maxRepliesPerComment: TIKTOK_COMMENTS_PER_POST,
+      }),
     }
   );
 
